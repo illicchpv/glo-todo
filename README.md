@@ -44,3 +44,31 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+---
+---
+---
+
+### [Урок 1](https://glo-academy.org/react-ts-lesson1). Создание и настройка стартового приложения React.JS + TS 
+
+>npm ci
+>npm i sass -save-dev
+
+- [Node.JS](https://nodejs.org/en)
+- [Reactjs.org](https://ru.legacy.reactjs.org/)
+- [React.dev](https://react.dev/learn)
+- [create-react-app](https://create-react-app.dev/docs/getting-started/)
+- [Руководство по GIT](https://githowto.com/ru)
+
+
+- [to-do-layout.zip](https://fs02.getcourse.ru/fileservice/file/download/a/12250/sc/250/h/76d24ddfd3b00c816388ad77d0549efc.zip)
+- [to-do-master.zip — шаблон приложения с версиями пакетов](https://fs17.getcourse.ru/fileservice/file/download/a/12250/sc/56/h/- dd60acb59d700d3bad9c3adcee0f9bfe.zip)
+
+#### Задание
+
+1. Повторить за уроком. 
+2. Создать стартовый шаблон приложения. 
+3. Залить на Git
+
+
+Результат необходимо отправить телеграм-боту — залить на github или отправить архивом
