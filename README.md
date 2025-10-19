@@ -49,8 +49,12 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 ---
 ---
 
+[github.com](https://github.com/illicchpv/glo-todo)
+
+
 ### [Урок 1](https://glo-academy.org/react-ts-lesson1). Создание и настройка стартового приложения React.JS + TS 
 
+>npx create-react-app my-app --template typescript
 >npm ci
 >npm i sass -save-dev
 
@@ -72,3 +76,13 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 
 Результат необходимо отправить телеграм-боту — залить на github или отправить архивом
+
+
+### Урок 2. Перенос верстки в приложение [Урок 2. ](https://glo-academy.org/react-ts-lesson2)
+
+[Компоненты](https://reactdev.ru/learn/your-first-component/)
+[CSS modules](https://habr.com/ru/articles/335244/)
+
+#### Задание
+
+1. Повторить за уроком. 
