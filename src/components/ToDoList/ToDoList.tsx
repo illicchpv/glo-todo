@@ -1,38 +1,26 @@
 import "./ToDoList.scss";
+import { ToDo } from "../../Models/todo-item";
 
 import { ToDoListItem } from "./ToDoListItem/ToDoListItem";
 
-interface Human {
-  name: string
-}
 
-interface Man extends Human {
-  sex: 'man'
-}
-interface Woman extends Human {
-  sex?: 'woman'
-}
 
 export const ToDoList = () => {
-  const hum1: Man = {
-    name: `alex`,
-    sex: 'man'
+  const todo1: ToDo = {
+    id: 0,
+    text: 'Первая задача',
+    isDone: false,
   }
-  const hum2: Woman = {
-    name: `kate`,
-    sex: 'woman'
-  }
-
 
   return (
     <div className="todo-container">
 
       <ul className="todo-list failed">
-        <ToDoListItem />
+        <ToDoListItem text="moq текст" toDoItem={todo1} />
       </ul>
 
       <ul className="todo-list completed">
-        <ToDoListItem />
+        {/* <ToDoListItem /> */}
         {/* <li className="todo-list-item__wrapper">
           <span>Вторая задача</span>
           <div className="todo-list-item__buttons">
