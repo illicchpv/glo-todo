@@ -2,7 +2,6 @@ import { ToDo } from "../../../Models/todo-item";
 import "./ToDoListItem.scss";
 
 export const ToDoListItem = (props: {toDoItem: ToDo}) => {
-  console.log('props: ', props);
 
   return (
     <li className="todo-list-item__wrapper">

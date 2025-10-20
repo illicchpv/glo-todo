@@ -5,27 +5,25 @@ import { ToDoListItem } from "./ToDoListItem/ToDoListItem";
 
 
 
-export const ToDoList = () => {
-  const todo1: ToDo = {
-    id: 0,
-    text: 'Первая задача',
-    isDone: false,
+export const ToDoList = (props: {todos: ToDo[]}) => {
+  const todos = props.todos
+
+  const checkedList = () => {
+    return todos.filter((el, i) => el.isDone).map(el => <ToDoListItem key={el.id} toDoItem={el} />)
   }
-  const todo2: ToDo = {
-    id: 1,
-    text: 'Вторая задача',
-    isDone: true,
+  const unCheckedList = () => {
+    return todos.filter((el, i) => !el.isDone).map(el => <ToDoListItem key={el.id} toDoItem={el} />)
   }
 
   return (
     <div className="todo-container">
 
       <ul className="todo-list failed">
-        <ToDoListItem toDoItem={todo1} />
+        {checkedList()}
       </ul>
 
       <ul className="todo-list completed">
-        <ToDoListItem toDoItem={todo2} />
+        {unCheckedList()}
       </ul>
     </div>
   );
