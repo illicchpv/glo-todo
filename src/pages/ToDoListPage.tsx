@@ -28,16 +28,31 @@ export const ToDoListPage = () => {
 
     const newId = todos.reduce((acc, el) => acc > el.id ? acc : el.id, 0) + 1
     // console.log('newId: ', newId);
-    setTodos([...todos, {id: newId, text, isDone: false}])
+    setTodos([...todos, { id: newId, text, isDone: false }])
   }
+
+  const updateToDo = (toDoItem: ToDo) => {
+    console.log('updateToDo', toDoItem);
+    const newTodos = todos.map(el => el.id === toDoItem.id ? { ...el, isDone: !el.isDone } : el)
+    setTodos(newTodos)
+  }
+  const deleteToDo = (toDoItem: ToDo) => {
+    console.log('deleteToDo', toDoItem);
+    const newTodos = todos.filter(el => el.id !== toDoItem.id)
+    setTodos(newTodos)
+  }
+
 
   return (
     <>
-      <Header/>
+      <Header />
 
-      <Form createNewDoDo={createNewDoDo}/>
+      <Form createNewDoDo={createNewDoDo} />
 
-      <ToDoList todos={todos} />
+      <ToDoList todos={todos}
+        updateToDo={updateToDo}
+        deleteToDo={deleteToDo}
+      />
     </>
   )
 }
