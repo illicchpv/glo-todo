@@ -22,11 +22,16 @@ export const ToDoListPage = () => {
       },
     ]
 
+  const createNewDoDo = (text: string) => {
+    console.log('createNewDoDo text: ', text);
+
+  }
+
   return (
     <>
       <Header/>
 
-      <Form/>
+      <Form createNewDoDo={createNewDoDo}/>
 
       <ToDoList todos={todos} />
     </>
