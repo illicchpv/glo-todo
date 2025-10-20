@@ -77,6 +77,7 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 Результат необходимо отправить телеграм-боту — залить на github или отправить архивом
 
+---
 
 ### Урок 2. Перенос верстки в приложение [Урок 2. ](https://glo-academy.org/react-ts-lesson2)
 
@@ -86,3 +87,22 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 #### Задание
 
 1. Повторить за уроком. 
+
+---
+
+### Урок 3. Реализация логики ToDo List [Урок 3. ](https://glo-academy.org/react-ts-lesson3)
+
+- useState()   https://ru.legacy.reactjs.org/docs/hooks-intro.html
+- useEffect()  https://ru.legacy.reactjs.org/docs/hooks-overview.html
+- Списки и ключи  https://ru.legacy.reactjs.org/docs/lists-and-keys.html
+- TypeScript для React  https://habr.com/ru/companies/otus/articles/456124/
+
+#### Задание
+
+- Повторить за уроком. 
+    (Результат необходимо отправить телеграм-боту — залить на github или отправить архивом)
+
+#### Усложнённое
+
+- Подключить библиотеку react-toastify (или любую другую для работы со всплывающими уведомлениями)
+- С помощью данных пакетов при добавлении / удалении / изменении каждого элемента ToDo листа выводить в нижнем правом углу сообщение с соответствующим текстом.
