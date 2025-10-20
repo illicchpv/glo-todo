@@ -2,13 +2,27 @@ import "./ToDoList.scss";
 
 import { ToDoListItem } from "./ToDoListItem/ToDoListItem";
 
-// type FirsType = string | number 
-type FirsType = 'ssss1' | number 
+interface Human {
+  name: string
+}
+
+interface Man extends Human {
+  sex: 'man'
+}
+interface Woman extends Human {
+  sex?: 'woman'
+}
 
 export const ToDoList = () => {
-  // let myVar: string | number = 'ssss'
-  let myVar: FirsType = 'ssss1'
-  myVar = 7
+  const hum1: Man = {
+    name: `alex`,
+    sex: 'man'
+  }
+  const hum2: Woman = {
+    name: `kate`,
+    sex: 'woman'
+  }
+
 
   return (
     <div className="todo-container">
