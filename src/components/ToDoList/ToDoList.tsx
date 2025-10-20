@@ -18,13 +18,14 @@ export const ToDoList = (props: {todos: ToDo[]}) => {
   return (
     <div className="todo-container">
 
+      <ul className="todo-list completed">
+        {unCheckedList()}
+      </ul>
+      
       <ul className="todo-list failed">
         {checkedList()}
       </ul>
 
-      <ul className="todo-list completed">
-        {unCheckedList()}
-      </ul>
     </div>
   );
 }

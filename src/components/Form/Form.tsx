@@ -1,25 +1,26 @@
-import { ChangeEvent, FormEvent } from "react";
+import { FormEvent, useState } from "react";
 import "./Form.scss";
 
 export const Form = (props: { createNewDoDo: Function }) => {
-  let createText = ''
+  const [text, setText] = useState<string>('')
 
   const formSubmit = (e: FormEvent) => {
     e.preventDefault()
     // console.log('formSubmit createText: ', createText);
-    if(createText) props.createNewDoDo(createText)
-  }
-  
-  const changeText = (e: ChangeEvent<HTMLInputElement>) => {
-    createText = e.target.value
-    // console.log('changeText createText: ', createText);
+    if (text) {
+      props.createNewDoDo(text)
+      setText('')
+    }
   }
 
   return (
     <div className="form-wrapper">
       <form onSubmit={formSubmit}>
         <label>
-          <input type="text" onInput={changeText} />
+          <input type="text"
+            onChange={e => setText(e.target.value)}
+            value={text}
+          />
           <button></button>
         </label>
       </form>
