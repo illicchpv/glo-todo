@@ -106,3 +106,15 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 - Подключить библиотеку react-toastify (или любую другую для работы со всплывающими уведомлениями)
 - С помощью данных пакетов при добавлении / удалении / изменении каждого элемента ToDo листа выводить в нижнем правом углу сообщение с соответствующим текстом.
+
+
+### Урок 4. Маршрутизация React [Урок 4.](https://glo-academy.org/react-ts-lesson4) 
+
+- [React Router (старый синтаксис)](https://v5.reactrouter.com/web/guides/quick-start)
+- [React Router (новый синтаксис)](https://reactrouter.com/en/main/upgrading/v6-data)
+
+#### Усложнённое
+
+1. Установить библиотеку react-helmetи react-helmet-async
+2. С их помощью вынести из public/index.html все связанное с google (шрифты, link preconnect) и добавить их в layout.component через HelmetProvider
+3. Стилизовать страницу 404. Прикрепляйте свои варианты скрином к ДЗ. Ждем красивых страничек ^^

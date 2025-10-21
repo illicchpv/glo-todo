@@ -58,8 +58,6 @@ export const ToDoListPage = () => {
 
   return (
     <>
-      <Header />
-
       <Form createNewDoDo={createNewDoDo} />
 
       <ToDoList todos={todos}

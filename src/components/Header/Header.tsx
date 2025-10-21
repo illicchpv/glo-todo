@@ -1,18 +1,23 @@
+import { NavLink } from "react-router-dom";
 import cl from "./Header.module.scss";
 
 export const Header = () => {
+  const getActiveClass = ({ isActive }: { isActive: boolean }): string => {
+    return isActive ? `${cl.link} ${cl.active}` : cl.link;
+  }
+
   return (
     <header className={cl.header}>
       <div className={cl.container}>
-        {/* <a className={`${cl.link} ${cl.active}`} href="/">ToDo</a> */}
-        <a className={cl.link} href="/">ToDo</a>
+        <NavLink
+          className={getActiveClass}
+          to="/">Home</NavLink>
+        <NavLink
+          className={getActiveClass}
+          to="/todo">ToDo</NavLink>
       </div>
     </header>
 
   );
-    // <header className="header">
-    //   <div className="header-container">
-    //     <a href="/">ToDo</a>
-    //   </div>
-    // </header>
+
 }
