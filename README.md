@@ -115,6 +115,13 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 #### Усложнённое
 
-1. Установить библиотеку react-helmetи react-helmet-async
+1. Установить библиотеку react-helmet и react-helmet-async
 2. С их помощью вынести из public/index.html все связанное с google (шрифты, link preconnect) и добавить их в layout.component через HelmetProvider
 3. Стилизовать страницу 404. Прикрепляйте свои варианты скрином к ДЗ. Ждем красивых страничек ^^
+
+>npm i react-helmet
+>npm i --save-dev @types/react-helmet
+>npm i react-helmet-async
+
+npm uninstall @types/react-helmet
+npm uninstall react-helmet

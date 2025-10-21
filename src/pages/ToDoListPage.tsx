@@ -1,9 +1,9 @@
 import { useState } from "react"
 import { Form } from "../components/Form/Form"
-import { Header } from "../components/Header/Header"
 import { ToDoList } from "../components/ToDoList/ToDoList"
 import { ToDo } from "../Models/todo-item"
 import { Bounce, toast, ToastContainer } from "react-toastify"
+import { Helmet } from "react-helmet-async";
 
 export const ToDoListPage = () => {
   const [todos, setTodos] = useState<ToDo[]>([
@@ -58,6 +58,10 @@ export const ToDoListPage = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Задачи | ToDo List App</title>
+      </Helmet>   
+
       <Form createNewDoDo={createNewDoDo} />
 
       <ToDoList todos={todos}
