@@ -5,7 +5,8 @@ export const ListItem = ({ todo }: { todo: ToDo }) => {
   return (
     <a
       className={`${cl.link} ${todo.isDone ? cl.done : ""}`}
-      href={`/list/${todo.id}`}
+      target="_black"
+      href={`/app/list/${todo.id}`}
     > {todo.id}. {todo.text}</a>
   )
 };
