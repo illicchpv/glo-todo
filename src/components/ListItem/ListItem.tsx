@@ -3,12 +3,12 @@ import { ToDo } from "../../Models/todo-item";
 import cl from "./ListItem.module.scss";
 
 export const ListItem = ({ todo }: { todo: ToDo }) => {
-  return (
-    <NavLink
+  return (<>
+    <a
       className={`${cl.link} ${todo.isDone ? cl.done : ""}`}
-      to={`/list/${todo.id}`}
-    > {todo.id}. {todo.text}</NavLink>
+      target="_blank" rel="noreferrer"
+      href={`/list/${todo.id}`}
+    >{todo.id}. {todo.text}</a>
+  </>
   )
-  //       target="_black"
-
 };
