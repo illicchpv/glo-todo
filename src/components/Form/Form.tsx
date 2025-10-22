@@ -1,10 +1,10 @@
-import { FormEvent, useState } from "react";
+import { FormEvent, SyntheticEvent, useState } from "react";
 import "./Form.scss";
 
 export const Form = (props: { createNewDoDo: Function }) => {
   const [text, setText] = useState<string>('')
 
-  const formSubmit = (e: FormEvent) => {
+  const formSubmit = (e: SyntheticEvent) => {  // e: SyntheticEvent // e: FormEvent
     e.preventDefault()
     // console.log('formSubmit createText: ', createText);
     if (text) {

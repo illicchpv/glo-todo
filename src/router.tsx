@@ -37,15 +37,28 @@ export const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <ViewListPage todos={todos} />,
+        element: <ToDoListPage />,
       },
+/*
       {
         path: "/todo",
-        element: <ToDoListPage />,
+        element: <ViewListPage todos={todos} />,
       },
       {
         path: "/list/:id",
         element: <ItemPage todos={todos} />,
+      },
+*/
+      {
+        path: "/list",
+        element: <ViewListPage todos={todos} />,
+        children: [
+          {
+            path: ":id",
+            element: <ItemPage todos={todos} />,
+          }
+        ],
+
       },
     ],
   },
