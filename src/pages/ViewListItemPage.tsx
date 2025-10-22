@@ -7,7 +7,7 @@ interface ComponentProps {
   todos: ToDo[];
 }
 
-export const ItemPage = ({ todos }: ComponentProps) => {
+export const ViewListItemPage = ({ todos }: ComponentProps) => {
   const { id } = useParams()
   const navigate = useNavigate()
   const [todo, setTodo] = useState<ToDo | null>(null)
