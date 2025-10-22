@@ -4,6 +4,8 @@ import { ToDoList } from "../components/ToDoList/ToDoList"
 import { ToDo } from "../Models/todo-item"
 import { Bounce, toast, ToastContainer } from "react-toastify"
 import { Helmet } from "react-helmet-async";
+import { useSelector } from "react-redux"
+import { RootState } from "../store"
 
 export const ToDoListPage = () => {
   const [todos, setTodos] = useState<ToDo[]>([
@@ -24,6 +26,8 @@ export const ToDoListPage = () => {
     },
   ])
 
+  const todoList = useSelector((state: RootState) => state.todoList.todos)
+  
   const notify = (s: string) => toast(s);
   const notifyErr = (s: string) => toast.error(s);
 
@@ -64,10 +68,14 @@ export const ToDoListPage = () => {
 
       <Form createNewDoDo={createNewDoDo} />
 
-      <ToDoList todos={todos}
+      <ToDoList todos={todoList}
         updateToDo={updateToDo}
         deleteToDo={deleteToDo}
       />
+      {/* <ToDoList todos={todos}
+        updateToDo={updateToDo}
+        deleteToDo={deleteToDo}
+      /> */}
 
       <ToastContainer
         position="bottom-right"
