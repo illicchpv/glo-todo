@@ -6,28 +6,6 @@ import { ToDoListPage } from "./pages/ToDoListPage"
 import { ViewListItemPage } from "./pages/ViewListItemPage"
 import { ToDo } from "./Models/todo-item"
 
-const todos: ToDo[] = [
-  {
-    id: 0,
-    text: 'Первая задача(изменить нельзя)',
-    isDone: false,
-  },
-  {
-    id: 1,
-    text: 'Вторая задача',
-    isDone: true,
-  },
-  {
-    id: 2,
-    text: 'Третья задача',
-    isDone: false,
-  },
-  {
-    id: 3,
-    text: 'Четвёртая задача',
-    isDone: true,
-  },
-]
 
 export const router = createBrowserRouter([
   {
@@ -41,11 +19,11 @@ export const router = createBrowserRouter([
       },
       {
         path: "/list",
-        element: <ViewListPage todos={todos} />,
+        element: <ViewListPage />,
       },
       {
         path: "/list/:id",
-        element: <ViewListItemPage todos={todos} />,
+        element: <ViewListItemPage />,
       },
     ],
   },
