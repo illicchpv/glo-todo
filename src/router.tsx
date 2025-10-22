@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom"
 import { Layout } from "./layouts/Layout"
 import { NotFoundPage } from "./pages/404"
-import { HomePage } from "./pages/HomePage"
+import { ViewListPage } from "./pages/ViewListPage"
 import { ToDoListPage } from "./pages/ToDoListPage"
 import { ItemPage } from "./pages/ItemPage"
 import { ToDo } from "./Models/todo-item"
@@ -37,7 +37,7 @@ export const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <HomePage todos={todos} />,
+        element: <ViewListPage todos={todos} />,
       },
       {
         path: "/todo",
