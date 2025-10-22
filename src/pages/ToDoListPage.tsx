@@ -1,62 +1,64 @@
-import { useState } from "react"
+// import { useState } from "react"
 import { Form } from "../components/Form/Form"
 import { ToDoList } from "../components/ToDoList/ToDoList"
 import { ToDo } from "../Models/todo-item"
 import { Bounce, toast, ToastContainer } from "react-toastify"
 import { Helmet } from "react-helmet-async";
-import { useSelector } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
 import { RootState } from "../store"
+import { createAction, deleteAction, updateAction } from "../features/todoList"
 
 export const ToDoListPage = () => {
-  const [todos, setTodos] = useState<ToDo[]>([
-    {
-      id: 0,
-      text: 'Первая задача(изменить нельзя)',
-      isDone: false,
-    },
-    {
-      id: 1,
-      text: 'Вторая задача',
-      isDone: true,
-    },
-    {
-      id: 2,
-      text: 'Третья задача',
-      isDone: true,
-    },
-  ])
+  // const [todos, setTodos] = useState<ToDo[]>([
+  //   {
+  //     id: 0,
+  //     text: 'Первая задача(изменить нельзя)',
+  //     isDone: false,
+  //   },
+  //   {
+  //     id: 1,
+  //     text: 'Вторая задача',
+  //     isDone: true,
+  //   },
+  //   {
+  //     id: 2,
+  //     text: 'Третья задача',
+  //     isDone: true,
+  //   },
+  // ])
 
   const todoList = useSelector((state: RootState) => state.todoList.todos)
+  const dispatch = useDispatch()
   
   const notify = (s: string) => toast(s);
   const notifyErr = (s: string) => toast.error(s);
 
   const createNewDoDo = (text: string) => {
-    console.log('createNewDoDo text: ', text);
+    dispatch(createAction(text))
 
-    const newId = todos.reduce((acc, el) => acc > el.id ? acc : el.id, 0) + 1
-    const toDoItem = { id: newId, text, isDone: false }
-    setTodos([...todos, toDoItem])
-    notifyErr(`Создана задача: "${toDoItem.text}"`)
+    // notifyErr(`Создана задача: "${toDoItem.text}"`)
   }
 
   const updateToDo = (toDoItem: ToDo) => {
-    console.log('updateToDo', toDoItem);
-    const newTodos: ToDo | undefined = todos.find(el => el.id === toDoItem.id)
-    if (!newTodos || toDoItem.id === 0) {
-      notifyErr(`Задача: "${toDoItem.text}" id:"${toDoItem.id}"  не найдена!`)
-      return
-    }
-    newTodos.isDone = !newTodos.isDone
-    setTodos([...todos])
-    notify(`Задача: "${newTodos.text}" ${newTodos.isDone ? ('выполнена!').toUpperCase() : ('не выполнена!').toUpperCase()}`)
+    dispatch(updateAction(toDoItem))
+
+    // const newTodos: ToDo | undefined = todos.find(el => el.id === toDoItem.id)
+    // if (!newTodos || toDoItem.id === 0) {
+    //   notifyErr(`Задача: "${toDoItem.text}" id:"${toDoItem.id}"  не найдена!`)
+    //   return
+    // }
+    // newTodos.isDone = !newTodos.isDone
+    // setTodos([...todos])
+    // notify(`Задача: "${newTodos.text}" ${newTodos.isDone ? ('выполнена!').toUpperCase() : ('не выполнена!').toUpperCase()}`)
   }
 
   const deleteToDo = (toDoItem: ToDo) => {
-    console.log('deleteToDo', toDoItem);
-    const newTodos = todos.filter(el => el.id !== toDoItem.id)
-    setTodos(newTodos)
-    notify(`Удалена задача: "${toDoItem.text}"`)
+    dispatch(deleteAction(toDoItem))
+
+    // console.log('deleteToDo', toDoItem);
+    // const newTodos = todos.filter(el => el.id !== toDoItem.id)
+    // setTodos(newTodos)
+    // notify(`Удалена задача: "${toDoItem.text}"`)
   }
 
 
@@ -72,10 +74,6 @@ export const ToDoListPage = () => {
         updateToDo={updateToDo}
         deleteToDo={deleteToDo}
       />
-      {/* <ToDoList todos={todos}
-        updateToDo={updateToDo}
-        deleteToDo={deleteToDo}
-      /> */}
 
       <ToastContainer
         position="bottom-right"

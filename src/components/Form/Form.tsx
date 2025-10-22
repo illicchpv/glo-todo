@@ -17,7 +17,7 @@ export const Form = (props: { createNewDoDo: Function }) => {
     <div className="form-wrapper">
       <form onSubmit={formSubmit}>
         <label>
-          <input type="text"
+          <input type="text" autoComplete="none"
             onChange={e => setText(e.target.value)}
             value={text}
           />

@@ -14,15 +14,24 @@ export const todoSlice = createSlice({  // reducer
   name: 'todoList',
   initialState,
   reducers: { // мутаторы для изменения состояния
-    createAction: (state, action: PayloadAction<ToDo>) => {
-      // state.todo.push(action.payload)
-      console.log('createAction.payload: ', action.payload);
+    createAction: (state, action: PayloadAction<string>) => {
+      // console.log('createAction.payload: ', action.payload, state.todos);
+      const newId = state.todos.reduce((acc, el) => acc > el.id ? acc : el.id, 0) + 1
+      const toDoItem = { id: newId, text: action.payload, isDone: false }
+      // state.todos = [...state.todos, toDoItem]
+      state.todos.push(toDoItem)
     },
     updateAction: (state, action: PayloadAction<ToDo>) => {
-      console.log('updateAction.payload: ', action.payload);
+      // console.log('updateAction.payload: ', action.payload);
+      const toDoItem = action.payload
+      const modTodo: ToDo | undefined = state.todos.find(el => el.id === toDoItem.id)
+      if (modTodo) modTodo.isDone = !modTodo.isDone
+      // ??? state.todos = [...state.todos]
     },
     deleteAction: (state, action: PayloadAction<ToDo>) => {
-      console.log('deleteAction.payload: ', action.payload);
+      // console.log('deleteAction.payload: ', action.payload);
+      const toDoItem = action.payload
+      state.todos = state.todos.filter(el => el.id !== toDoItem.id)
     },
     // increment: (state) => {
     //   // Redux Toolkit allows us to write "mutating" logic in reducers. It
