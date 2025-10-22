@@ -125,3 +125,25 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 npm uninstall @types/react-helmet
 npm uninstall react-helmet
+
+### Урок 5. Redux [Урок 5.](https://glo-academy.org/react-ts-lesson5)
+
+Реализуем store приложения. Свяжем логику ToDo List с хранилищем Redux
+
+[Redux toolkit](https://redux-toolkit.js.org/tutorials/quick-start)
+
+Пакет react-redux обновился до версии 9-й что изменило типы данных и выскакивает ошибка по типу данных при сериализации через localstorage. 
+
+Чтобы ее избежать установите данные версии данных пакетов:
+
+npm install @reduxjs/toolkit@1 
+npm install react-redux@8
+
+#### Задание Усложнённое
+
+- В компоненте Form у нас есть строка состояния поля:
+- Написать reducer для данного функционала
+- Добавить reducer в store
+- Создать необходимые actions
+- Работать с value поля ввода через redux-toolkit
+- При создании ToDo считывать value из redux-toolkit (передавать в action)
