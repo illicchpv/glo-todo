@@ -26,17 +26,20 @@ export const ViewListItemPage = () => {
     }
   }, [todoList, id, navigate])
 
-  if(!todo) return null
+  if (!todo) return null
   const str = todo.text
 
   return (
     <>
       <Helmet>
         <title>{str} | ToDo List App</title>
-      </Helmet>    
+      </Helmet>
       <div className="container">
-        <h1>Название:[{todo?.text}]</h1>
-        <h1>id:[{id}]</h1>
+        <div>
+          <h2>text:[{todo?.text}]</h2>
+          <h2>id:[{id}]</h2>
+          <h2>isDone:[{todo?.isDone ? 'true' : 'false'}]</h2>
+        </div>
       </div>
     </>);
 };

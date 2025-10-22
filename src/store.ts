@@ -1,10 +1,18 @@
 import { configureStore } from '@reduxjs/toolkit'
 import todoReducer from './features/todoList'
+import { loadFromLocalStorage, saveToLocalStorage } from './helpers/storage'
+
 
 export const store = configureStore({
   reducer: {
     todoList: todoReducer
   },
+  preloadedState: loadFromLocalStorage(),
+})
+
+store.subscribe(() => {
+  // console.log('subscribe', store.getState())
+  saveToLocalStorage(store.getState())
 })
 
 // Infer the `RootState` and `AppDispatch` types from the store itself
