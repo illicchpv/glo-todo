@@ -4,7 +4,6 @@ import { NotFoundPage } from "./pages/404"
 import { ViewListPage } from "./pages/ViewListPage"
 import { ToDoListPage } from "./pages/ToDoListPage"
 import { ViewListItemPage } from "./pages/ViewListItemPage"
-import { ToDo } from "./Models/todo-item"
 
 
 export const router = createBrowserRouter([

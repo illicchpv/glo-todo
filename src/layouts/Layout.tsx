@@ -1,6 +1,5 @@
 import { Outlet } from "react-router-dom";
 import { Header } from "../components/Header/Header";
-// import { Helmet } from "react-helmet";
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 export const Layout = () => {
