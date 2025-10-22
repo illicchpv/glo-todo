@@ -14,7 +14,7 @@ export const Header = () => {
           to="/">Home</NavLink>
         <NavLink
           className={getActiveClass}
-          to="/todo">ToDo</NavLink>
+          to="/list">ToDo</NavLink>
       </div>
     </header>
 
