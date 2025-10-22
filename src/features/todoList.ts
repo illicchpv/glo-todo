@@ -3,15 +3,15 @@ import type { PayloadAction } from '@reduxjs/toolkit'
 import { ToDo } from '../Models/todo-item'
 
 export interface TodoState {
-  todo: ToDo[]
+  todos: ToDo[]
 }
 
 const initialState: TodoState = {
-  todo: [],
+  todos: [],
 }
 
 export const todoSlice = createSlice({  // reducer
-  name: 'todo',
+  name: 'todoList',
   initialState,
   reducers: { // мутаторы для изменения состояния
     createAction: (state, action: PayloadAction<ToDo>) => {
