@@ -147,3 +147,20 @@ npm install react-redux@8
 - Создать необходимые actions
 - Работать с value поля ввода через redux-toolkit
 - При создании ToDo считывать value из redux-toolkit (передавать в action)
+
+
+### Урок 6. Styled-components [Урок 6.](https://glo-academy.org/react-ts-lesson6)
+Изучим библиотеку styled-component. Стилизуем кастомные элементы
+
+[Styled components](https://styled-components.com/docs/basics#getting-started)
+  Используем версию пакета как в уроке "styled-components": "^5.0.0",  
+  > npm install styled-components@5.0.0
+  > npm install --save-dev  @types/styled-components
+  > npm i styled-normalize
+
+#### Задание
+
+1. Повторить за уроком 
+2. Стилизовать все компоненты через styled-components
+
+
