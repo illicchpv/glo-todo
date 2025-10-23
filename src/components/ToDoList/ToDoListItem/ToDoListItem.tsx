@@ -1,5 +1,4 @@
 import { ToDo } from "../../../Models/todo-item";
-// import "./ToDoListItem.scss";
 import { ToDoItem, ToDoItemControl, ToDoItemControls, ToDoItemText } from "./ToDoListItem.styled";
 
 import checkIcon from "../../../assets/images/check.png";

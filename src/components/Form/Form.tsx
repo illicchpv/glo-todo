@@ -1,5 +1,4 @@
 import { SyntheticEvent } from "react";
-// import "./Form.scss";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../store";
 import { setFormText } from "../../features/formSlice";
@@ -19,7 +18,6 @@ export const Form = (props: { createNewDoDo: Function }) => {
 
   const addSpec = (e: SyntheticEvent) => {
     const spec = (e.target as HTMLSpanElement).textContent?.replaceAll(`'`, ``)
-    // console.log('text: ', text, spec);
     dispatch(setFormText(`${text} ${spec}`))
   }
 

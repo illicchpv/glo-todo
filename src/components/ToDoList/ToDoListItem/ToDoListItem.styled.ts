@@ -61,11 +61,3 @@ export const ToDoItemControl = styled.button<{icon: string}>`
     }
 
 `
-
-
-/*
-export const ToDoItem = styled.div`
-
-`
-
-*/

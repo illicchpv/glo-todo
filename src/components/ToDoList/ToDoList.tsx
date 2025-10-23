@@ -1,4 +1,3 @@
-import "./ToDoList.scss";
 import { ToDo } from "../../Models/todo-item";
 
 import { ToDoListItem } from "./ToDoListItem/ToDoListItem";

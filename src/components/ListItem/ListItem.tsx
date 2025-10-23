@@ -1,5 +1,4 @@
 import { ToDo } from "../../Models/todo-item";
-// import cl from "./ListItem.module.scss";
 import { StyledLink } from "./ListItem.styled";
 
 export const ListItem = ({ todo }: { todo: ToDo }) => {
@@ -10,5 +9,4 @@ export const ListItem = ({ todo }: { todo: ToDo }) => {
     >{todo.id}. {todo.text}</StyledLink>
   </>
   )
-  // className={`${cl.link} ${todo.isDone ? cl.done : ""}`}
 };
