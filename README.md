@@ -158,7 +158,7 @@ npm install react-redux@8
   > npm install --save-dev  @types/styled-components
   > npm i styled-normalize
 
-#### Задание
+#### Задание +
 
 1. Повторить за уроком 
 2. Стилизовать все компоненты через styled-components
