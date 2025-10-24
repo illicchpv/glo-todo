@@ -164,3 +164,18 @@ npm install react-redux@8
 2. Стилизовать все компоненты через styled-components
 
 
+### Урок 7. Динамические цветовые темы [Урок 7.](https://glo-academy.org/react-ts-lesson7)
+
+[Gh-pages](https://www.npmjs.com/package/gh-pages)
+[Мануал по настройке 404](https://github.com/rafgraph/spa-github-pages)
+[Пример кода, репозиторий](https://github.com/Velmoren/todo-app/tree/main)
+
+> npm i uuid
+> npm i --save-dev @types/uuid
+
+#### Усложнённое задание
+
+1) Стилизовать приложение по желанию
+2) Установить пакет gh-pages
+3) Опубликовать свое приложение
+4) Ссылку на приложение прикрепить к комментарию домашнего задания
