@@ -125,8 +125,8 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 - >npm i --save-dev @types/react-helmet
 - >npm i react-helmet-async
 
-npm uninstall @types/react-helmet
-npm uninstall react-helmet
+npm uninstall @types/react-helmet  
+npm uninstall react-helmet  
 
 ### Урок 5. Redux [Урок 5.](https://glo-academy.org/react-ts-lesson5)
 
@@ -138,8 +138,8 @@ npm uninstall react-helmet
 
 Чтобы ее избежать установите данные версии данных пакетов:
 
-npm install @reduxjs/toolkit@1 
-npm install react-redux@8
+npm install @reduxjs/toolkit@1  
+npm install react-redux@8  
 
 #### Задание Усложнённое
 
@@ -168,13 +168,16 @@ npm install react-redux@8
 
 ### Урок 7. Динамические цветовые темы [Урок 7.](https://glo-academy.org/react-ts-lesson7)
 
-[Gh-pages](https://www.npmjs.com/package/gh-pages)
-[👉 Мануал по настройке 404](https://github.com/rafgraph/spa-github-pages)
-[Пример кода, репозиторий](https://github.com/Velmoren/todo-app/tree/main)
+[Gh-pages](https://www.npmjs.com/package/gh-pages)  
+[👉 Мануал по настройке 404](https://github.com/rafgraph/spa-github-pages)  
+[Пример кода, репозиторий](https://github.com/Velmoren/todo-app/tree/main)  
 
 ```npm i uuid```
+
 ```npm i --save-dev @types/uuid```
+
 ```npm i gh-pages --save-dev```
+
 ```npm i env-cmd --save-dev```
 
 #### Усложнённое задание
