@@ -14,7 +14,7 @@ export const ViewListItemPage = () => {
   console.log('backURL: ', backURL);
 
   useEffect(() => {
-    const searchToDo = todoList.find(el => el.id === id)
+    const searchToDo = todoList.find(el => el.id == id)
     console.log('searchToDo: ', searchToDo);
     if (!searchToDo) {
       console.log(`Задача id:${id} не найдена!`)
@@ -36,6 +36,7 @@ export const ViewListItemPage = () => {
         <div>
           <h2>text:[{todo?.text}]</h2>
           <h2>done:[{todo?.done ? 'true' : 'false'}]</h2>
+          <h4>id:[{todo?.id}]</h4>
         </div>
         <NavLink to={backURL}>back to list</NavLink>
       </div>

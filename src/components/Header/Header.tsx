@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { StyledContainer, StyledHeader, StyledNavLink, StyledToggleBlock } from "./Header.styled";
+import { StyledContainer, StyledHeader, StyledNavLink, StyledToggleBlock, StyledToggleControl } from "./Header.styled";
 import { toggleThemeAction } from "../../features/themeList";
 
 export const Header = () => {
@@ -13,7 +13,7 @@ export const Header = () => {
         <StyledNavLink to="/404">Error</StyledNavLink>
 
         <StyledToggleBlock>
-          <button onClick={() => dispatch(toggleThemeAction())}>Toggle</button>
+          <StyledToggleControl onClick={() => dispatch(toggleThemeAction())}>Toggle</StyledToggleControl>
         </StyledToggleBlock>
       </StyledContainer>
     </StyledHeader>

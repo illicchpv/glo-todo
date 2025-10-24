@@ -12,7 +12,6 @@ export const ToDoListPage = () => {
   const todoList = useSelector((state: RootState) => state.todoList.todos)
   const dispatch = useDispatch()
 
-  const getItemById = (id: string) => todoList.find(el => el.id === id)
   const notify = (s: string) => toast(s);
   const notifyErr = (s: string) => toast.error(s);
 
@@ -30,7 +29,6 @@ export const ToDoListPage = () => {
   const updateToDo = (toDoItem: ToDo) => {
     try {
       dispatch(updateAction(toDoItem))
-      toDoItem = getItemById(toDoItem.id) as ToDo
       notify(`Задача: "${toDoItem.text}" ${!toDoItem.done ? ('выполнена!').toUpperCase() : ('не выполнена!').toUpperCase()}`)
     } catch (error: any) {
       console.log('updateToDo error: ', error.message);

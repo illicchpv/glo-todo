@@ -38,3 +38,26 @@ export const StyledToggleBlock = styled.div`
   top: 50%;
   transform: translateY(-50%);
 `
+
+export const StyledToggleControl = styled.button`
+  border: 1px solid #afd7f8ff;
+  border-radius: 10px;
+  padding: 5px 10px;
+  padding-right: 40px;
+  background-color: #4682b4;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    background-color: ${({theme}) => theme.colors.backgroundSecondary};
+  }
+`
