@@ -35,8 +35,7 @@ export const ViewListItemPage = () => {
       <div className="container">
         <div>
           <h2>text:[{todo?.text}]</h2>
-          <h2>id:[{id}]</h2>
-          <h2>isDone:[{todo?.isDone ? 'true' : 'false'}]</h2>
+          <h2>done:[{todo?.done ? 'true' : 'false'}]</h2>
         </div>
         <NavLink to={backURL}>back to list</NavLink>
       </div>

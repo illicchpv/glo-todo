@@ -21,7 +21,7 @@ export const todoSlice = createSlice({  // reducer
       if(!action.payload) throw new Error('задачу без текста невозможно создать')
       // const newId = state.todos.reduce((acc, el) => acc > el.id ? acc : el.id, 0) + 1
       const newId = uuid()
-      const toDoItem = { id: newId, text: action.payload, isDone: false }
+      const toDoItem = { id: newId, text: action.payload, done: false }
       // state.todos = [...state.todos, toDoItem]
       state.todos.push(toDoItem)
     },
@@ -34,7 +34,7 @@ export const todoSlice = createSlice({  // reducer
       } else if (toDoItem.text.includes('no-update')) {
         throw new Error('задачу "no-update" невозможно обновить')
       }
-      modTodo.isDone = !modTodo.isDone
+      modTodo.done = !modTodo.done
       // ??? state.todos = [...state.todos]
     },
     deleteAction: (state, action: PayloadAction<ToDo>) => {

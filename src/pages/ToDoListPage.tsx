@@ -31,7 +31,7 @@ export const ToDoListPage = () => {
     try {
       dispatch(updateAction(toDoItem))
       toDoItem = getItemById(toDoItem.id) as ToDo
-      notify(`Задача: "${toDoItem.text}" ${!toDoItem.isDone ? ('выполнена!').toUpperCase() : ('не выполнена!').toUpperCase()}`)
+      notify(`Задача: "${toDoItem.text}" ${!toDoItem.done ? ('выполнена!').toUpperCase() : ('не выполнена!').toUpperCase()}`)
     } catch (error: any) {
       console.log('updateToDo error: ', error.message);
       notifyErr(error.message)

@@ -16,7 +16,7 @@ export const ToDoListItem = (props: {toDoItem: ToDo, updateToDo: Function, delet
           onClick={() => props.deleteToDo(props.toDoItem)}
         ></ToDoItemControl>
         <ToDoItemControl
-          icon={props.toDoItem.isDone ? checkIcon : uncheckIcon}
+          icon={props.toDoItem.done ? checkIcon : uncheckIcon}
           onClick={() => props.updateToDo(props.toDoItem)}
         ></ToDoItemControl>
       </ToDoItemControls>
