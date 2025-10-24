@@ -1,6 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 import type { PayloadAction } from '@reduxjs/toolkit'
 import { ToDo } from '../Models/todo-item'
+import { v4 as uuid } from 'uuid'
 
 export interface TodoState {
   todos: ToDo[]
@@ -18,7 +19,8 @@ export const todoSlice = createSlice({  // reducer
       // console.log('createAction.payload: ', action.payload, state.todos);
       if(action.payload.includes('no-create')) throw new Error('задачу "no-create" невозможно создать')
       if(!action.payload) throw new Error('задачу без текста невозможно создать')
-      const newId = state.todos.reduce((acc, el) => acc > el.id ? acc : el.id, 0) + 1
+      // const newId = state.todos.reduce((acc, el) => acc > el.id ? acc : el.id, 0) + 1
+      const newId = uuid()
       const toDoItem = { id: newId, text: action.payload, isDone: false }
       // state.todos = [...state.todos, toDoItem]
       state.todos.push(toDoItem)

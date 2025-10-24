@@ -1,13 +1,9 @@
 import { useEffect, useState } from "react";
 import { ToDo } from "../Models/todo-item";
-import { Link, NavLink, useNavigate, useParams } from "react-router-dom";
+import { NavLink, useNavigate, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { useSelector } from "react-redux";
 import { RootState } from "../store";
-
-interface ComponentProps {
-  todos: ToDo[];
-}
 
 export const ViewListItemPage = () => {
   const todoList = useSelector((state: RootState) => state.todoList.todos)
@@ -18,7 +14,7 @@ export const ViewListItemPage = () => {
   console.log('backURL: ', backURL);
 
   useEffect(() => {
-    const searchToDo = todoList.find(el => el.id === Number(id))
+    const searchToDo = todoList.find(el => el.id === id)
     console.log('searchToDo: ', searchToDo);
     if (!searchToDo) {
       console.log(`Задача id:${id} не найдена!`)
