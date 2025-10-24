@@ -56,7 +56,7 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 ### [Урок 1](https://glo-academy.org/react-ts-lesson1). Создание и настройка стартового приложения React.JS + TS 
 
-- >npx create-react-app my-app --template typescript
+- >```npx create-react-app my-app --template typescript```
 - >npm ci
 - >npm i sass -save-dev
 
@@ -169,13 +169,13 @@ npm install react-redux@8
 ### Урок 7. Динамические цветовые темы [Урок 7.](https://glo-academy.org/react-ts-lesson7)
 
 [Gh-pages](https://www.npmjs.com/package/gh-pages)
-[Мануал по настройке 404](https://github.com/rafgraph/spa-github-pages)
+[👉 Мануал по настройке 404](https://github.com/rafgraph/spa-github-pages)
 [Пример кода, репозиторий](https://github.com/Velmoren/todo-app/tree/main)
 
-- > npm i uuid
-- > npm i --save-dev @types/uuid
-- > npm i gh-pages --save-dev
-- > npm i env-cmd --save-dev 
+```npm i uuid```
+```npm i --save-dev @types/uuid```
+```npm i gh-pages --save-dev```
+```npm i env-cmd --save-dev```
 
 #### Усложнённое задание
 
