@@ -172,6 +172,8 @@ npm install react-redux@8
 
 > npm i uuid
 > npm i --save-dev @types/uuid
+> npm i gh-pages --save-dev
+> npm i env-cmd --save-dev 
 
 #### Усложнённое задание
 
