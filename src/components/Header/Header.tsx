@@ -9,6 +9,8 @@ export const Header = () => {
           to="/">ToDo</StyledNavLink>
         <StyledNavLink
           to="/list">List</StyledNavLink>
+        <StyledNavLink
+          to="/404">Error</StyledNavLink>
       </StyledContainer>
     </StyledHeader>
   );
