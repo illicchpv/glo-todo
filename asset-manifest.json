@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/glo-todo/static/js/main.0caa16a0.js",
+    "main.js": "/glo-todo/static/js/main.f27145e9.js",
     "index.html": "/glo-todo/index.html",
-    "main.0caa16a0.js.map": "/glo-todo/static/js/main.0caa16a0.js.map"
+    "main.f27145e9.js.map": "/glo-todo/static/js/main.f27145e9.js.map"
   },
   "entrypoints": [
-    "static/js/main.0caa16a0.js"
+    "static/js/main.f27145e9.js"
   ]
 }
