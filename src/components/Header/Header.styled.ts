@@ -19,6 +19,7 @@ export const StyledContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 `
 
 export const StyledNavLink = styled(NavLink)`
@@ -29,4 +30,11 @@ export const StyledNavLink = styled(NavLink)`
     &.active {
         color: #ffffff33;
     }
+`
+
+export const StyledToggleBlock = styled.div`
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
 `

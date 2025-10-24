@@ -11,7 +11,8 @@ ${normalize}
 }
 
 body {
-    background-color: ${props => props.theme.colors.backgroundSecondary};
+    transition: background-color 0.2s ease-in-out;
+    background-color: ${({theme}) => theme.colors.backgroundSecondary};
     padding: 50px 0 0 0;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;

@@ -15,8 +15,14 @@ export const themeSlice = createSlice({
   initialState,
   reducers: {
     toggleThemeAction: (state) => {
-      console.log('toggleThemeAction state: ', state);
+      // console.log('toggleThemeAction state: ', state);
+      // debugger
+      // console.log('state.theme: ', state.theme.name);
+      // state.theme = themes['dark'] 
+      // return
       state.theme = state.theme.name === 'light' ? themes['dark'] : themes['light']
+      // console.log("state.theme.name === 'light': ", state.theme.name === 'light');
+      // console.log('state.theme: ', state.theme.name);
     },
   },
 })
