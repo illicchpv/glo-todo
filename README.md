@@ -56,9 +56,9 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 ### [Урок 1](https://glo-academy.org/react-ts-lesson1). Создание и настройка стартового приложения React.JS + TS 
 
->npx create-react-app my-app --template typescript
->npm ci
->npm i sass -save-dev
+- >npx create-react-app my-app --template typescript
+- >npm ci
+- >npm i sass -save-dev
 
 - [Node.JS](https://nodejs.org/en)
 - [Reactjs.org](https://ru.legacy.reactjs.org/)
@@ -121,9 +121,9 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 2. С их помощью вынести из public/index.html все связанное с google (шрифты, link preconnect) и добавить их в layout.component через HelmetProvider
 3. Стилизовать страницу 404. Прикрепляйте свои варианты скрином к ДЗ. Ждем красивых страничек ^^
 
->npm i react-helmet
->npm i --save-dev @types/react-helmet
->npm i react-helmet-async
+- >npm i react-helmet
+- >npm i --save-dev @types/react-helmet
+- >npm i react-helmet-async
 
 npm uninstall @types/react-helmet
 npm uninstall react-helmet
@@ -156,9 +156,9 @@ npm install react-redux@8
 
 [Styled components](https://styled-components.com/docs/basics#getting-started)
   Используем версию пакета как в уроке "styled-components": "^5.0.0",  
-  > npm install styled-components@5.0.0
-  > npm install --save-dev  @types/styled-components
-  > npm i styled-normalize
+  - > npm install styled-components@5.0.0
+  - > npm install --save-dev  @types/styled-components
+  - > npm i styled-normalize
 
 #### Задание +
 
@@ -172,10 +172,10 @@ npm install react-redux@8
 [Мануал по настройке 404](https://github.com/rafgraph/spa-github-pages)
 [Пример кода, репозиторий](https://github.com/Velmoren/todo-app/tree/main)
 
-> npm i uuid
-> npm i --save-dev @types/uuid
-> npm i gh-pages --save-dev
-> npm i env-cmd --save-dev 
+- > npm i uuid
+- > npm i --save-dev @types/uuid
+- > npm i gh-pages --save-dev
+- > npm i env-cmd --save-dev 
 
 #### Усложнённое задание
 
