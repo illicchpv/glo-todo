@@ -51,6 +51,8 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 [github.com](https://github.com/illicchpv/glo-todo)
 
+[опубликовано ](https://illicchpv.github.io/glo-todo/)
+
 
 ### [Урок 1](https://glo-academy.org/react-ts-lesson1). Создание и настройка стартового приложения React.JS + TS 
 
@@ -181,3 +183,7 @@ npm install react-redux@8
 2) Установить пакет gh-pages
 3) Опубликовать свое приложение
 4) Ссылку на приложение прикрепить к комментарию домашнего задания
+
+
+* .env.development - для того чтобы при запуске start сбросить установку "homepage": "/glo-todo",  
+  /glo-todo - корень приложения на gh 

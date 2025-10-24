@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { ToDo } from "../Models/todo-item";
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, NavLink, useNavigate, useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
 import { useSelector } from "react-redux";
 import { RootState } from "../store";
@@ -14,6 +14,8 @@ export const ViewListItemPage = () => {
   const { id } = useParams()
   const navigate = useNavigate()
   const [todo, setTodo] = useState<ToDo | null>(null)
+  const backURL = `/list`;
+  console.log('backURL: ', backURL);
 
   useEffect(() => {
     const searchToDo = todoList.find(el => el.id === Number(id))
@@ -40,6 +42,7 @@ export const ViewListItemPage = () => {
           <h2>id:[{id}]</h2>
           <h2>isDone:[{todo?.isDone ? 'true' : 'false'}]</h2>
         </div>
+        <NavLink to={backURL}>back to list</NavLink>
       </div>
     </>);
 };

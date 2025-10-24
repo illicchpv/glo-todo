@@ -34,8 +34,9 @@
   },
   "scripts": {
     "start": "env-cmd -f .env.development react-scripts start",
-    "build": "react-scripts build",
     "build-and-deploy": "npm run build && npm run deploy",
+    "build": "react-scripts build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
