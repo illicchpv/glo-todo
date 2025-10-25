@@ -1,7 +1,6 @@
 import { RootState } from "../store";
 
 export const saveToLocalStorage = (state: RootState) => {
-  // console.log('saveToLocalStorage state: ', state);
   try {
     const appState = JSON.stringify(state)
     localStorage.setItem('appState', appState)

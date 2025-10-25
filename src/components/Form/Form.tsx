@@ -11,7 +11,6 @@ export const Form = (props: { createNewDoDo: Function }) => {
   const text = useSelector((state: RootState) => state.form.text);
 
   const formSubmit = (e: SyntheticEvent) => {  // e: SyntheticEvent // e: FormEvent
-    // console.log('formSubmit e: ', e);
     e.preventDefault()
     if (props.createNewDoDo(text)) dispatch(setFormText(''))
   }

@@ -15,7 +15,6 @@ export const formSlice = createSlice({
   reducers: {
     setFormText: (state, action: PayloadAction<string>) => {
       state.text = action.payload
-      // console.log('state.text: ', state.text);
     },
   },
 })

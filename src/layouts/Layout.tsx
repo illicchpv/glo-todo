@@ -8,7 +8,6 @@ import { RootState } from "../store";
 
 export const Layout = () => {
   const theme = useSelector((state: RootState) => state.themeList.theme);
-  // console.log('theme: ', theme);
 
   return (
     <HelmetProvider>

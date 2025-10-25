@@ -4,7 +4,7 @@ import { NotFoundPage } from "./pages/404"
 import { ViewListPage } from "./pages/ViewListPage"
 import { ToDoListPage } from "./pages/ToDoListPage"
 import { ViewListItemPage } from "./pages/ViewListItemPage"
-import { ghRoot, isDev } from "./const"
+import { ghRoot } from "./const"
 
 export const router = createBrowserRouter([
   {
@@ -34,5 +34,5 @@ export const router = createBrowserRouter([
     path: "*",
     element: <NotFoundPage />,
   },
-], { basename: `${isDev ? '' : ghRoot}` }) // { basename: '/app/' }
+], { basename: ghRoot }) // { basename: '/app/' }
 // ], { basename: '/' }) // { basename: '/app/' }

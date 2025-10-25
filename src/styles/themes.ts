@@ -1,8 +1,5 @@
 import { Theme, Themes } from "../Models/theme";
 
-// #4682b4
-// #edf0f1
-
 const light: Theme = {
   name: 'light',
   colors: {

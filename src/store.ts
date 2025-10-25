@@ -15,7 +15,6 @@ export const store = configureStore({
 })
 
 store.subscribe(() => {
-  // console.log('subscribe', store.getState())
   saveToLocalStorage(store.getState())
 })
 
