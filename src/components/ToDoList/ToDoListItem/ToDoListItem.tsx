@@ -5,11 +5,11 @@ import checkIcon from "../../../assets/images/check.png";
 import uncheckIcon from "../../../assets/images/uncheck.png";
 import trashIcon from "../../../assets/images/trash.png";
 
-export const ToDoListItem = (props: {toDoItem: ToDo, updateToDo: Function, deleteToDo: Function}) => {
+export const ToDoListItem = (props: {nom:number, toDoItem: ToDo, updateToDo: Function, deleteToDo: Function}) => {
 
   return (
     <ToDoItem>
-      <ToDoItemText>{props.toDoItem.id}. {props.toDoItem.text}</ToDoItemText>
+      <ToDoItemText>{props.nom}. "{props.toDoItem.text}"</ToDoItemText>
       <ToDoItemControls>
         <ToDoItemControl
           icon={trashIcon}

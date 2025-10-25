@@ -24,7 +24,7 @@ export const todoSlice = createSlice({  // reducer
     },
     updateAction: (state, action: PayloadAction<ToDo>) => {
       const toDoItem = action.payload
-      const modTodo: ToDo | undefined = state.todos.find(el => el.id == toDoItem.id)
+      const modTodo: ToDo | undefined = state.todos.find(el => el.id === toDoItem.id)
       if (!modTodo) {
         throw new Error('задачу "no-update" невозможно обновить')
       } else if (toDoItem.text.includes('no-update')) {

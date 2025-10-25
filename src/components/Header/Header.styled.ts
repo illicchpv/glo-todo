@@ -24,11 +24,18 @@ export const StyledContainer = styled.div`
 
 export const StyledNavLink = styled(NavLink)`
     text-decoration: none;
-    padding: 10px;
+    padding: 5px 10px;
     color: #fff;
+    transition: background-color 0.2s ease-in-out;
+    border-radius: 10px;
 
+    &:hover {
+      background-color: #67afe9ff;
+    }
     &.active {
-        color: #ffffff33;
+      color: #ffffff33;
+      background-color: transparent;
+      cursor: default;
     }
 `
 
@@ -48,6 +55,8 @@ export const StyledToggleControl = styled.button`
   color: #fff;
   cursor: pointer;
   position: relative;
+  transition: background-color 0.2s ease-in-out;
+  
   &:after {
     content: '';
     position: absolute;
@@ -59,5 +68,9 @@ export const StyledToggleControl = styled.button`
     border-radius: 50%;
     background-color: #fff;
     background-color: ${({theme}) => theme.colors.backgroundSecondary};
+  }
+
+  &:hover {
+    background-color: #67afe9ff;
   }
 `

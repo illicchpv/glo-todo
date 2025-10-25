@@ -6,4 +6,6 @@ export const StyledNavLink = styled(NavLink)<{done: string}>`
   padding: 10px;
   color: ${({done}) => done === 'true' ? 'green' : 'red'};
   text-decoration: ${({done}) => done === 'true' ? 'line-through' : 'none'};
+  min-width: 70%;
+  background-color: #fff;
 `
